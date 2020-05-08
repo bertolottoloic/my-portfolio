@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PresentationPageComponent implements OnInit {
 
-  constructor() { }
+  public height: string;
+  constructor() {
+  }
 
   ngOnInit(): void {
+    this.height = window.innerHeight * 0.928 + 'px';
   }
 
 }

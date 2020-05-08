@@ -4,12 +4,14 @@ import { AppRoutingModule } from './app.routing.module'; // CLI imports AppRouti
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { PresentationPageComponent } from './presentation-page/presentation-page.component';
+import { ResizeDirective } from './directives/resize.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    PresentationPageComponent
+    PresentationPageComponent,
+    ResizeDirective
   ],
   imports: [
     BrowserModule,

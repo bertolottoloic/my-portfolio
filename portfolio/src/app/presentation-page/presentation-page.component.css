@@ -1,0 +1,20 @@
+.container-img{
+    width: 100%;
+    background-image: url("../../assets/images/main-page-back.jpg");
+    background-color: rgba(156, 149, 149, 0.3);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#img-profile{
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 10px;
+    border-color: gray;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    
+}
