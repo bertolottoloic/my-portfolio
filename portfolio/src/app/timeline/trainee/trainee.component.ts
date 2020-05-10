@@ -1,4 +1,4 @@
-import { Component, OnInit, Input,  ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Input,  ViewChild, ElementRef, HostListener } from '@angular/core';
 import { TraineeService } from 'src/app/services/trainee.service';
 import { Trainee } from 'src/app/models/trainee.model';
 import { ResizedEvent } from 'angular-resize-event';
@@ -30,11 +30,11 @@ import { trigger, state, style, animate, transition, useAnimation } from '@angul
     transition('initial=>final', animate('1000ms ease-out'))
   ]),
   trigger('Display', [
-    state('initial', style({visibility: 'hidden'})),
-    state('final', style({visibility: 'visible'})),
+    state('initial', style({display: 'none'})),
+    state('final', style({display: 'unset'})),
     transition('initial=>final', animate('1ms'))
   ])
-  
+
 ]
 })
 export class TraineeComponent implements OnInit {
@@ -53,23 +53,21 @@ export class TraineeComponent implements OnInit {
   public currentState: string;
 
   constructor() {
-    
+
   }
 
   ngOnInit(): void {
-    this.currentState = 'initial';  
+    this.currentState = 'initial';
   }
 
-  onResized($event: ResizedEvent){
+  onResized($event: ResizedEvent) {
     // this.descriptor.nativeElement.style.height = (window.innerWidth>991) ? $event.newHeight + 'px' : '100%';
-    
+
   }
+
 
   onAppear(): void {
-    
-    console.log(this.des.nativeElement);
     this.currentState = 'final';
-    
   }
 
 

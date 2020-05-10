@@ -1,11 +1,11 @@
 <div class="box" >
     <div class="adapt" *ngIf="index%2===0">
-        <div class="descriptor col-md-6" appResizeTrainee #des (appear) = "onAppear()" [@EnterLeft] = currentState [@Display] = currentState >
-            <div class="descriptor-text" >
+        <div class="descriptor col-md-6" appResizeTrainee #des (appear) = "onAppear()"  [@EnterLeft] = currentState>
+            <div class="descriptor-text">
                 <h1 class="traineeTitle">{{trainee.title}}</h1>
                 <h2 class="traineePlace">{{trainee.place}}</h2>
                 <p class="traineeDes">{{trainee.description}}</p>
-                <h2 class="traineeYear">{{trainee.gapYear}}</h2>
+                <h2 class="traineeYearEven">{{trainee.gapYear}}</h2>
             </div>
         </div>
         <div *ngIf="window.innerWidth >=991" class="col-md-6 img-train" (resized)="onResized($event)"  #img>
@@ -21,7 +21,7 @@
                 <h1 class="traineeTitle">{{trainee.title}}</h1>
                 <h2 class="traineePlace">{{trainee.place}}</h2>
                 <p class="traineeDes">{{trainee.description}}</p>
-                <h2 class="traineeYear">{{trainee.gapYear}}</h2>
+                <h2 class="traineeYearOdd">{{trainee.gapYear}}</h2>
             </div>
         </div>
     </div>

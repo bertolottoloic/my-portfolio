@@ -12,7 +12,7 @@ nav{
 .menu-normal {
     display: flex;
     flex-direction: row;
-    
+
 }
 
 .menu-burger{
@@ -77,6 +77,7 @@ a {
     width: 35px;
     height: 40px;
     top: 10px;
+    cursor: pointer;
 }
 
 
@@ -91,4 +92,8 @@ a {
 
 .burger > li:hover{
     background-color: grey;
+}
+
+.burger{
+  margin: 0px;
 }

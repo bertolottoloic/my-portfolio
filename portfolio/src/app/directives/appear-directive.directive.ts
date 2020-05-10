@@ -22,11 +22,12 @@ export class AppearDirective implements AfterViewInit, OnDestroy {
   subscriptionScroll: Subscription;
   subscriptionResize: Subscription;
 
-  constructor(private element: ElementRef){
+  constructor(private element: ElementRef) {
     this.appear = new EventEmitter<void>();
   }
 
   saveDimensions() {
+
     this.elementPos = this.getOffsetTop(this.element.nativeElement);
     this.elementHeight = this.element.nativeElement.offsetHeight;
     this.windowHeight = window.innerHeight;
@@ -34,28 +35,28 @@ export class AppearDirective implements AfterViewInit, OnDestroy {
   saveScrollPos() {
     this.scrollPos = window.scrollY;
   }
-  getOffsetTop(element: any){
+  getOffsetTop(element: any) {
     let offsetTop = element.offsetTop || 0;
-    if(element.offsetParent){
+    if (element.offsetParent) {
       offsetTop += this.getOffsetTop(element.offsetParent);
     }
     return offsetTop;
   }
-  checkVisibility(){
-    if(this.isVisible()){
+  checkVisibility() {
+    if (this.isVisible()) {
       // double check dimensions (due to async loaded contents, e.g. images)
       this.saveDimensions();
-      if(this.isVisible()){
+      if (this.isVisible()) {
         this.unsubscribe();
         this.appear.emit();
       }
     }
   }
-  isVisible(){
-    return this.scrollPos >= this.elementPos || (this.scrollPos + this.windowHeight) >= (this.elementPos + this.elementHeight/2);
+  isVisible() {
+    return this.scrollPos >= this.elementPos || (this.scrollPos + this.windowHeight) >= (this.elementPos + this.elementHeight / 2);
   }
 
-  subscribe(){
+  subscribe() {
     this.subscriptionScroll = fromEvent(window, 'scroll').pipe(startWith(null))
       .subscribe(() => {
         this.saveScrollPos();
@@ -67,19 +68,19 @@ export class AppearDirective implements AfterViewInit, OnDestroy {
         this.checkVisibility();
       });
   }
-  unsubscribe(){
-    if(this.subscriptionScroll){
+  unsubscribe() {
+    if (this.subscriptionScroll) {
       this.subscriptionScroll.unsubscribe();
     }
-    if(this.subscriptionResize){
+    if (this.subscriptionResize) {
       this.subscriptionResize.unsubscribe();
     }
   }
 
-  ngAfterViewInit(){
+  ngAfterViewInit() {
     this.subscribe();
   }
-  ngOnDestroy(){
+  ngOnDestroy() {
     this.unsubscribe();
   }
 }
