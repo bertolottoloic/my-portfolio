@@ -1,0 +1,25 @@
+.timeline-container{
+    height: auto;
+    max-width: 945px;
+    margin: 0% 5% 0% 5%;
+}
+
+.title-timeline{
+    text-align: center;
+    margin: 50px 0px 50px 0px;
+}
+
+.vertical-rule{
+    border: 3px solid rgb(151, 152, 154);
+    border-radius: 5px 5px 5px 5px;
+    width: 0px;
+    right: 49.5%;
+    position: absolute;
+    z-index: 10;
+    background-color: rgb(151, 152, 154);
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+}

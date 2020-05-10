@@ -1,11 +1,11 @@
 .container-img{
     width: 100%;
-    background-image: url("../../assets/images/main-page-back.jpg");
-    background-color: rgba(156, 149, 149, 0.3);
+    background-image: url("../../assets/images/main-page-bis.jpg");
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 #img-profile{
@@ -17,4 +17,27 @@
     height: 300px;
     object-fit: cover;
     
+}
+
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    /* text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px; */
+}
+
+#name, #age, #presentation {
+    color: white;
+    text-align: center;
+}
+
+#profession{
+    color: #babab4;
+    text-align: center;
+}
+
+#presentation {
+    margin: 20px 0px 20px 0px;
 }

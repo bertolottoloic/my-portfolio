@@ -1,9 +1,14 @@
-<nav>
-    <h1 id="portfolio">Portfolio</h1>
-    <ul class="menu">
+<nav [class]="(window.innerWidth >= 992) ? 'menu-normal': 'menu-burger'">
+    <div class="port-cont">
+        <h1 id="portfolio">Portfolio</h1>
+    </div>
+    <ul [class]= "(window.innerWidth >= 992) ? 'normal' : 'burger'" #liste>
+        <li><a href="">Profil</a></li>
         <li><a href="">Formations</a></li>
         <li><a href="">Exp. Pro.</a></li>
         <li><a href="">Compétences</a></li>
         <li><a href="">CV</a></li>
     </ul>
+    <img class="burger-icon" *ngIf="!(window.innerWidth >= 992)" src="../../assets/images/Hamburger_icon.svg.png" alt="burger-icon" title="Menu" (click)="onClick()"/>
 </nav>
+
