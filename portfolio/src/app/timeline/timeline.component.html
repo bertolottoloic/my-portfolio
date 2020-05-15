@@ -1,9 +1,10 @@
 <div class="center">
     <div class="timeline-container" (resized)="onResized($event)">
-        <h1 class="title-timeline" #exp>Expériences</h1>
+        <h1 class="title-timeline dark-grey-text" #exp>{{title}}</h1>
         <div *ngIf="window.innerWidth >=992" class="vertical-rule" #verticalRule></div>
         <div *ngFor="let trainee of trainees; let i = index;">
             <app-trainee [trainee]="trainee" [index]="i"></app-trainee>
         </div>
     </div>
 </div>
+<div class="empty"></div>

@@ -1,0 +1,37 @@
+[
+  {
+    "title": "PolyQuiz",
+    "imageUrl": "photo1589567191523.png",
+    "languageId": 1589560289321,
+    "description": "Réalisation d'un site intéractif, quiz en ligne, à destination d'un EHPAD. Ce site a été réalisé dans le but d'être accessible pour des patients atteints d'un trouble de la mémoire, visuel ou moteur.",
+    "id": 1589567474236
+  },
+  {
+    "title": "Google HashCode 2020",
+    "imageUrl": "photo1589567540143.png",
+    "languageId": 1589560001779,
+    "description": "Participation à la phase de qualification de la Google HashCode 2020 (première place du Hub Polytech'Nice Sophia).",
+    "id": 1589567674914
+  },
+  {
+    "title": "Citadelles",
+    "imageUrl": "photo1589567739543.jpg",
+    "languageId": 1589559978456,
+    "description": "Reproduction du jeu de société Citadelles en Java, sans interface graphique. Création de diverses IA et confrontations de ces dernières entre-elles.",
+    "id": 1589567888903
+  },
+  {
+    "title": "Morpion",
+    "imageUrl": "photo1589567922369.png",
+    "languageId": 1589560580837,
+    "description": "Réalisation d'un morpion en JavaScript avec implémentation d'une stratégie.",
+    "id": 1589568026292
+  },
+  {
+    "title": "Dark Duck",
+    "imageUrl": "photo1589568035531.jpg",
+    "languageId": 1589560721523,
+    "description": "Réalisation d'un jeu vidéo pour les cours d'ISN de terminal. Jeu basé sur les mécaniques de jeu du premier Donkey Kong.",
+    "id": 1589568152752
+  }
+]

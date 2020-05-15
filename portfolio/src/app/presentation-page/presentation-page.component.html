@@ -2,9 +2,15 @@
     <img id="img-profile" src="../../assets/images/photocv.jpg"/>
     <div class="profile">
         <h1 id="name">Loïc Bertolotto</h1>
-        <h1 id="profession">Étudiant Ingénieur « Sciences Informatiques »</h1>
+        <h1 id="profession">Étudiant Ingénieur <em>«Sciences Informatiques»</em></h1>
         <h2 id="age"> {{age}} ans</h2>
         <p id="presentation">Actuellement en études d’ingénieur en spécialité « Sciences Informatiques », je suis à la recherche d’un contrat d’apprentissage pour les deux dernières années de ma formation d’ingénieur. </p>
     </div>
 </div>
-<app-timeline></app-timeline>
+<app-timeline [title] = "'Formations'" [trainees]="formations"></app-timeline>
+<app-timeline [title] = "'Expériences'" [trainees]="works"></app-timeline>
+<app-project-list></app-project-list>
+<h1 class="title dark-grey-text">Compétences</h1>
+<app-skills-list [title] = "'Langages & Frameworks'" [skills]="languages"></app-skills-list>
+<app-skills-list [title] = "'Technos'" [skills]="technos"></app-skills-list>
+<app-skills-list [title] = "'Langues'" [skills]="speaks"></app-skills-list>

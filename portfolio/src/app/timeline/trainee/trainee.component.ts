@@ -1,13 +1,11 @@
 import { Component, OnInit, Input,  ViewChild, ElementRef, HostListener } from '@angular/core';
-import { TraineeService } from 'src/app/services/trainee.service';
-import { Trainee } from 'src/app/models/trainee.model';
 import { ResizedEvent } from 'angular-resize-event';
 import { trigger, state, style, animate, transition, useAnimation } from '@angular/animations';
 
 @Component({
   selector: 'app-trainee',
   templateUrl: './trainee.component.html',
-  styleUrls: ['./trainee.component.css'],
+  styleUrls: ['./trainee.component.scss'],
   animations: [
   trigger('fadeInOut', [
     state('initial', style({
@@ -38,12 +36,12 @@ import { trigger, state, style, animate, transition, useAnimation } from '@angul
 ]
 })
 export class TraineeComponent implements OnInit {
-  @ViewChild('descriptor') descriptor: ElementRef;
+  @ViewChild('img') img: ElementRef;
   @ViewChild('des') des: ElementRef;
 
 
   @Input()
-  public trainee: Trainee;
+  public trainee: any;
 
   @Input()
   public index: number;
@@ -61,7 +59,8 @@ export class TraineeComponent implements OnInit {
   }
 
   onResized($event: ResizedEvent) {
-    // this.descriptor.nativeElement.style.height = (window.innerWidth>991) ? $event.newHeight + 'px' : '100%';
+    console.log($event.newHeight)
+    this.img.nativeElement.style.height = $event.newHeight + 'px';
 
   }
 

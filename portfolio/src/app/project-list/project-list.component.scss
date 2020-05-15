@@ -1,0 +1,30 @@
+.row{
+    align-items: center;
+    justify-content: center;
+}
+
+.cont{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cont-sup{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.empty{
+    width: 100%;
+    height:12px;
+    box-shadow: inset 0 12px 12px -12px #292c2f;;
+    position: absolute;
+    z-index:21;
+}
+
+h3{
+    font-size: xx-large;
+}

@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    box-shadow: 0px 1px 20px black;
+    box-shadow: 0px 5px 20px -2px #111;
 }
 
 #img-profile{
@@ -40,5 +40,13 @@
 }
 
 #presentation {
-    margin: 20px 0px 20px 0px;
+    margin: 12px 0px 20px 0px;
+    font-size: 17px;
 }
+
+.title{
+    margin: 75px 0px 0px 0px;
+    text-align: center;
+    font-weight: bold;
+}
+

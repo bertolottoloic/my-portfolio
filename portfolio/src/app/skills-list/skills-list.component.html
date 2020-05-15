@@ -1,0 +1,9 @@
+<div class="skill-container">
+    <h1 class="title dark-grey-text">{{title}}</h1>
+    <div class="skill-list">
+        <div *ngFor ="let skill of skills" class="card-like" [style.width] = "(skill.level)? '300px': '200px'" [style.height] = "(skill.level)? '250px': '200px'" >
+            <a [href]="skill.url" target="_blank"> <img [src]="skill.imageUrl" [alt]="skill.name" [title]="skill.name"/> </a>
+            <p *ngIf="skill.level" class="level">{{skill.level}}</p>
+        </div> 
+    </div>
+</div>

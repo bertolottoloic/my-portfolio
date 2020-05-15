@@ -1,0 +1,18 @@
+[
+  {
+    "gapYear": "Été 2019",
+    "title": "Employé Polyvalent",
+    "description": "Travail saisonnier en tant qu'employé polyvalent au sein du groupe LIDL (caisse, mise en rayon,...) durant 3 mois.",
+    "imageUrl": "photo1589558863729.jpg",
+    "place": "LIDL - Le Tignet",
+    "id": 1589558896679
+  },
+  {
+    "gapYear": "Été 2017 & 2018",
+    "title": "Conditionneur",
+    "description": "Travail saisonnier en tant que conditionneur dans une entreprise aromatique, pendant 4 mois au total.",
+    "imageUrl": "photo1589558978704.png",
+    "place": "Expressions Aromatiques - Mouans-Sartoux",
+    "id": 1589559298672
+  }
+]
