@@ -1,6 +1,7 @@
-import { Component, OnInit, Input,  ViewChild, ElementRef, HostListener } from '@angular/core';
+import { Component, OnInit, Input,  ViewChild, ElementRef, HostListener, AfterViewInit, AfterViewChecked } from '@angular/core';
 import { ResizedEvent } from 'angular-resize-event';
 import { trigger, state, style, animate, transition, useAnimation } from '@angular/animations';
+import { Observable, BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-trainee',
@@ -48,14 +49,14 @@ export class TraineeComponent implements OnInit {
 
   public window:Window = window;
 
-  public currentState: string;
+  public initial: boolean = true;
 
   constructor() {
 
   }
 
+
   ngOnInit(): void {
-    this.currentState = 'initial';
   }
 
   onResized($event: ResizedEvent) {
@@ -66,7 +67,7 @@ export class TraineeComponent implements OnInit {
 
 
   onAppear(): void {
-    this.currentState = 'final';
+    setTimeout(()=> this.initial = false, 100)
   }
 
 

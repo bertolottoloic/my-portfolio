@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
+import { serverUrlUploads } from 'src/configs/server.config';
 
 @Component({
   selector: 'app-nav-bar',
@@ -9,6 +10,7 @@ export class NavBarComponent implements OnInit {
   @ViewChild('liste') liste: ElementRef;
   private display: string = "none"
   public window: Window = window;
+  public serverUrlUploads: string = serverUrlUploads;
   constructor() { }
 
   ngOnInit(): void {

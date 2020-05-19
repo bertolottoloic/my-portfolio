@@ -4,5 +4,7 @@ export interface Project{
     title: string,
     description: string,
     imageUrl: string,
-    language: Skill
+    language: Skill, 
+    url?: string,
+    gitUrl: string
 }

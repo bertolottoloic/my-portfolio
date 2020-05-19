@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'portfolio';
+  date: number;
+
+  constructor(){
+    this.date = new Date().getFullYear(); 
+  }
 }

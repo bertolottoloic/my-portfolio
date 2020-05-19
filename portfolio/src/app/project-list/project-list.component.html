@@ -4,7 +4,7 @@
   <!-- Section: Block Content -->
   <section class="dark-grey-text text-center">
 
-    <h3 class="font-weight-bold mb-4 pb-2">Projets réalisés</h3>
+    <h3 id="projects" class="font-weight-bold mb-4 pb-2">Projets réalisés</h3>
     <p class="text-muted w-responsive mx-auto mb-5">Voici quelques projets que j'ai été amené à réaliser au cours de ces 3 dernières années, consultables depuis mon github.</p>
 
     <!-- Grid row -->
@@ -15,7 +15,7 @@
         <div class="cont">
           <div class="view overlay rounded z-depth-1">
             <img [src]="project.imageUrl" class="img-fluid " alt="Sample project image">
-            <a>
+            <a [href]="(project.url)?project.url:''" target="_blank" [style.pointerEvents]="(project.url)?'auto':'none'">
               <div class="mask rgba-white-slight"></div>
             </a>
           </div>
@@ -26,7 +26,7 @@
           </a>
           <h4 class="font-weight-bold mb-3">{{project.title}}</h4>
           <p class="text-muted">{{project.description}}</p>
-          <a class="btn btn-success btn-rounded btn-md" href="{{project.link}}"> View more</a>
+          <a class="btn btn-success btn-rounded btn-md" href="{{project.gitUrl}}" target="_blank"> Voir code</a>
         </div>
 
       </div>

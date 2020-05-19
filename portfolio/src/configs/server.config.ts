@@ -6,4 +6,5 @@ export const httpOptionsBase = {
   })
 };
 
-export const serverUrlApi = 'http://localhost:9428/api';
+export const serverUrlApi = 'https://obscure-hollows-29163.herokuapp.com/api';
+export const serverUrlUploads = 'https://obscure-hollows-29163.herokuapp.com/uploads'
