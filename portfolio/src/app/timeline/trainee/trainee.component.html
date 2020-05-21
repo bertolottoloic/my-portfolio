@@ -1,29 +1,29 @@
 <div class="box" >
-    <div class="adapt" *ngIf="index%2===0">
-        <div class="descriptor col-lg-6" appResizeTrainee  (appear) = "onAppear()"  [@EnterLeft] = "(initial)?'initial':'final'">
+    <div class="adapt-even" *ngIf="index%2===0">
+        <div class="descriptor col-lg-6 col-md-12" (appear) = "onAppear()"  [@EnterLeft] = "(initial)?'initial':'final'">
             <div class="descriptor-text">
                 <h2 class="traineeYearEven">{{trainee.gapYear}}</h2>
                 <h1 class="traineeTitle">{{trainee.title}}</h1>
                 <h2 class="traineePlace">{{trainee.place}}</h2>
                 <p class="traineeDes">{{trainee.description}}</p>
-                
+
             </div>
         </div>
-        <div *ngIf="window.innerWidth >=991" class="col-lg-6 img-train" #img>
+        <div class="col-lg-6 col-md-12 img-train" #img>
             <img id="img-trainee" [src]="trainee.imageUrl" [@fadeInOut] = "(initial)?'initial':'final'"/>
         </div>
     </div>
-    <div class="adapt" *ngIf="index%2===1">
-        <div *ngIf="window.innerWidth > 991" class="col-lg-6 img-train" #img>
+    <div class="adapt-odd" *ngIf="index%2===1">
+        <div class="col-lg-6 col-md-12 img-train" #img>
             <img id="img-trainee" [src]="trainee.imageUrl" [@fadeInOut] = "(initial)?'initial':'final'"/>
         </div>
-        <div class="descriptor col-lg-6" appResizeTrainee (appear) = "onAppear()" [@EnterRight] = "(initial)?'initial':'final'">
+        <div class="descriptor col-lg-6 col-md-12" (appear) = "onAppear()" [@EnterRight] = "(initial)?'initial':'final'">
             <div class="descriptor-text">
                 <h2 class="traineeYearOdd">{{trainee.gapYear}}</h2>
                 <h1 class="traineeTitle">{{trainee.title}}</h1>
                 <h2 class="traineePlace">{{trainee.place}}</h2>
                 <p class="traineeDes">{{trainee.description}}</p>
-                
+
             </div>
         </div>
     </div>

@@ -1,14 +1,14 @@
-<nav [class]="(window.innerWidth >= 992) ? 'menu-normal': 'menu-burger'">
+<nav [class]="(window.innerWidth > 991) ? 'menu-normal': 'menu-burger'">
     <div class="port-cont">
         <h1 id="portfolio">Portfolio</h1>
     </div>
-    <ul [class]= "(window.innerWidth >= 992) ? 'normal' : 'burger'" #liste>
+    <ul [class]= "(window.innerWidth > 991) ? 'normal' : 'burger'" #liste>
         <li><a href="#formations"><div><p>Formations</p></div></a></li>
         <li><a href="#expériences"><div><p>Exp. Pro.</p></div></a></li>
         <li><a href="#projects"><div><p>Projets</p></div></a></li>
         <li><a href="#competences"><div><p>Compétences</p></div></a></li>
         <li><a [href]="serverUrlUploads + '/cv-alternance.pdf'" target="_blank"><div><p>CV</p></div></a></li>
     </ul>
-    <img class="burger-icon" *ngIf="!(window.innerWidth >= 992)" src="../../assets/images/Hamburger_icon.svg.png" alt="burger-icon" title="Menu" (click)="onClick()"/>
+    <img class="burger-icon" *ngIf="!(window.innerWidth > 991)" src="../../assets/images/Hamburger_icon.svg.png" alt="burger-icon" title="Menu" (click)="onClick()"/>
 </nav>
 

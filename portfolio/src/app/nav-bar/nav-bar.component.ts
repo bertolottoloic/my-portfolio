@@ -20,12 +20,12 @@ export class NavBarComponent implements OnInit {
     if(this.window.innerWidth<992){
       this.display = (this.display === 'none') ? 'flex' : 'none';
       this.liste.nativeElement.style.display = this.display;
-      
+
     }
   }
 
   @HostListener('window: resize') onWindowResize(){
-    if(this.window.innerWidth>=992){
+    if(this.window.innerWidth > 991){
       this.display = "none";
       this.liste.nativeElement.style.display = 'inline-flex';
     } else {

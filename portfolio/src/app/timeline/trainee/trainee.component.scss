@@ -92,10 +92,20 @@ p {
     box-shadow: 1px 1px 12px gray;
 }
 
-.adapt {
+.adapt-even {
     width: 100%;
     min-height: 350px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+.adapt-odd {
+  width: 100%;
+  min-height: 350px;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  align-items: center;
 }
